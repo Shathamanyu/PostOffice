@@ -11,7 +11,7 @@
             margin: 0;
             font-family: 'Arial', sans-serif;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             background-image: url(https://pbs.twimg.com/media/FU-7GTyaQAEKx3F.jpg:large);
@@ -20,15 +20,15 @@
         }
         #d1 {
             background-color: #dbd6d66d;
-            padding: 30px;
+            padding: 20px;
             border-radius: 15px;
             box-shadow: 1px 8px 16px rgba(247, 245, 245, 0.2);
             text-align: center;
-            width: 400px;
+            width: 90%;
+            max-width: 400px;
             animation: fadeIn 1.5s ease-in-out;
         }
         #d1 form {
-            
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -43,9 +43,9 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            
             font-size: 16px;
             transition: transform 0.3s ease-in-out;
+            width: 100%;
         }
         #d1 input[type="number"]:focus,
         #d1 input[type="text"]:focus {
@@ -73,16 +73,21 @@
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
+            overflow-y: auto;
+            max-height: 50vh;
+            width: 100%;
+            padding: 0 10px;
         }
         #d2 div {
-            background-color: #fef9d4; /* Light yellow to resemble a post box */
+            background-color: #fef9d4;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 250px;
+            width: 100%;
+            max-width: 250px;
             text-align: left;
             animation: slideIn 1s ease-out;
-            border: 2px solid #c1a15a; /* Adding a border like a post box */
+            border: 2px solid #c1a15a;
         }
         #d2 div h3 {
             margin-top: 0;
@@ -114,6 +119,23 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            #d1 {
+                padding: 15px;
+            }
+            #d1 input[type="number"],
+            #d1 input[type="text"] {
+                font-size: 14px;
+            }
+            #d1 input[type="submit"] {
+                font-size: 14px;
+            }
+            #d2 div {
+                padding: 15px;
+                font-size: 12px;
             }
         }
     </style>
